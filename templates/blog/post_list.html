@@ -7,6 +7,14 @@
 	<title>BIENVENIDOS</title>
 </head>
 <body>
-	
+
+	<h1>Bienvenido a mi proyecto</h1>
+		{% for elemento in blog %}
+    		<article>
+		        <time>published: {{ post.published_date }}</time>
+		        <h2><a href="">{{ post.title }}</a></h2>
+		        <p>{{ post.text|linebreaksbr }}</p>
+    		</article>
+		{% endfor %}
 </body>
 </html>
