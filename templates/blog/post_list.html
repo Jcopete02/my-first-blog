@@ -9,12 +9,16 @@
 <body>
 
 	<h1>Bienvenido a mi proyecto</h1>
-		{% for elemento in blog %}
-    		<article>
-		        <time>published: {{ post.published_date }}</time>
-		        <h2><a href="">{{ post.title }}</a></h2>
-		        <p>{{ post.text|linebreaksbr }}</p>
-    		</article>
-		{% endfor %}
+<section>
+	{% for post in posts %}
+	    <article>
+	    	<h3>{{ post.title }}</h3>
+	        <time>{{ post.published_date }}</time>
+	        <h2>{{ post.title }}</h2>
+	        <p>{{ post.text }}</p>
+	        <footer>{{ post.author }}</footer>
+	    </article>
+	{% endfor %}
+</section>
 </body>
 </html>
